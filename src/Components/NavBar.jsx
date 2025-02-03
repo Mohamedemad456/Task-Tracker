@@ -1,14 +1,15 @@
 import logo from "../logo.svg";
 import style from "../CSS/NavBar.module.css";
+import { NavLink} from "react-router-dom";
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg  bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand text-light" href="#">
+        <NavLink className="navbar-brand text-light" to="/">
           <img src={logo} alt="" />
           Taskedo
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler bg-light"
           type="button"
@@ -23,23 +24,41 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto fs-5">
             <li className={`nav-item ${style.link_effect}`}>
-              <a
-                className="nav-link active text-light mx-3"
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-light mx-3"
+                    : "nav-link text-light mx-3"
+                }
                 aria-current="page"
-                href="#"
+                to="/"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className={`nav-item ${style.link_effect}`}>
-              <a className="nav-link text-light mx-3" href="#">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-light mx-3"
+                    : "nav-link text-light mx-3"
+                }
+                to="/features"
+              >
                 Features
-              </a>
+              </NavLink>
             </li>
             <li className={`nav-item ${style.link_effect}`}>
-              <a className="nav-link text-light mx-3" href="#">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-light mx-3"
+                    : "nav-link text-light mx-3"
+                }
+                to="/pricing"
+              >
                 Pricing
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

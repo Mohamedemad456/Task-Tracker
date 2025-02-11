@@ -1,6 +1,6 @@
 function Features() {
   return (
-    <div>
+    <div className="col-2">
       <h1 className="text-dark">Features</h1>
     </div>
   );

@@ -4,7 +4,7 @@ import { NavLink} from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg  bg-dark">
+    <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#3D8D7A" }}>
       <div className="container-fluid">
         <NavLink className="navbar-brand text-light" to="/">
           <img src={logo} alt="" />

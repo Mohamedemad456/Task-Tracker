@@ -5,7 +5,9 @@ function NavLayout() {
     return (
         <>
         <NavBar/>
+        <div className="d-flex">
         <Outlet/>
+        </div>
         </>
     );
 }
